@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: rgb(42,43,48);
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+.logo{
+    width: 10%;
+    position: relative;
+    top: 50px;
+    left: 8%;
+}
+.layer{
+    position: relative;
+    top: -12px;
+    left: 87%;
+    width: 50px;
+    height: 65px;
+}
+.icon{
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    cursor: pointer;
+
+}
+.menu ul{
+    position: absolute;
+    left: 80%;
+    top: 100px;
+    background-color: white;
+    list-style: none;
+    width: 10%;
+    padding: 0;
+    line-height: 2;
+    display: none;
+    z-index: 1;
+    cursor: pointer;
+
+}
+li a{
+    text-decoration:none;
+    display: inline-block;
+    width: 100%;
+    color: black;
+}
+li a:hover{
+    background-color: grey;
+}
+.layer:hover+.menu ul{
+    display: inline-block;
+
+}
+ul:hover{
+    display: inline-block;
+}
+section{
+    position: relative;
+    left: 5%;
+    display: inline-block;
+    margin: 0% 0% 5% 4%;
+}
+.product{
+    display: inline-block;
+    width: 100%;
+    margin: 3%;
+    padding: 20%;
+    margin-bottom: 0;
+    background-color: rgb(36, 37, 42);
+}
+.product img{
+    object-fit: contain;
+    width: 295px;
+    height: 200px;
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    color: rgb(144, 176, 133);
+}
+.material-symbols-outlined:hover{
+    font-variation-settings: 'FILL' 1;
+    cursor: pointer;
+}
+.size{
+    position: absolute;
+    left: 80%;
+    top: 73%;
+    font-size: 27px;
+    background-color: rgb(144, 176, 133);
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding-top: 1%;
+}
+.productDesc{
+    color: white;
+    margin-left: 3%;
+    line-height: 1.5;
+}
+.productTitle{
+    font-size: 30px;
+}
+.cost{
+    font-size: 25px;
+    margin-bottom: 1%;
+    color: rgb(151, 151, 151);
+}
+.addtoCart button{
+    display: inline;
+    background-color: rgb(42,43,48);
+    border: 1px solid rgb(151, 151, 151);
+    padding: 4px;
+    color: rgb(151, 151, 151);
+    cursor: pointer;
+}
+.addtoCart button:hover{
+    color: black;
+    background-color: rgb(151, 151, 151);
+}
+footer{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    height: 80px;
+}
+.footerList a{
+    color: white;
+    text-decoration:none;
+    font-size: 30px;
+    position: relative;
+    left: 10px;
+    top: 25px;
+    padding: 25px;   
+}
+.footerList a:hover{
+    text-decoration: underline;
+}
