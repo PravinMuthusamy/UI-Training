@@ -1,62 +1,61 @@
-body{
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
     font-family: 'Roboto', sans-serif;
 }
 header{
     background-color: rgb(60, 22, 58);
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     text-align: center;
-    margin: 0;
-    padding: 10px;
+    padding: 35px;
 }
 img{
     width: 100%;
 }
 .table{
-    margin: 50px;
-    margin-left: 110px;
-   
+    margin: 50px 50px 50px 110px;
 }
 .element{
     width: 30%;
     display: inline-block;
     margin:10px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding:0 5px ;
+   
 }
 button{
-    background-color:rgb(112,32,83) ;
-    color:white;
+    background-color:#702053 ;
+    color:#ffffff;
     padding: 10px;
     
 }
-.foot{
+.caption{
     text-align: center;
     margin: auto;
     text-align: justify;
-    width: 50%;
+    width: 70%;
+    font-size: 20px;
+    line-height: 30px;
 }
 footer{
-    background-color: rgb(105,30,77);
-    color: white;
+    background-color: #691e4d;
+    color: #ffffff;
     padding: 20px;
     
 }
-.end p,h5{
-    margin: 0;
-    padding: 0;
+.copyrights p,h5{
     margin-left: 100px;
-   
 }
 h2{
-    color: rgb(160,97,136) ;
+    color: #a06188 ;
     font-weight: 100;
     text-align: center;
 }
 h4{
     margin: 0;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 5px 0 20px 0;
 }
 h3{
     margin-bottom: 0;
