@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+header{
+    display: flex;
+    position: sticky;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 0;
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0px 5px 5px #cccccc;
+}
+
+header .flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: start;
+    align-items: center;
+}
+.profile{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+}
+.profile img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+.container{
+    display: flex;
+    width: 70%;
+}
+.leftContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
+video{
+    width: 100%;
+}
+h3{
+    font-size: 25px;
+    font-weight: 400;
+}
+.leftContainer p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.line{
+    width: 100%;
+    height: 0.5px;
+    margin: 20px 0;
+    background-color: black;
+}
+.comments{
+    display: flex;
+    padding: 10px;
+}
+.comments img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.name{
+    font-weight: 600;
+}
+.desc{
+    font-size: 10px;
+    line-height: 1.5;
+    margin: 3px;
+}
+.rightContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 25%;
+}
+.rightContainer img{
+    width: 80%;
+    padding: 2%;
+    justify-content: center;
+}
+.message img{
+    position: fixed;
+    right: 5%;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+}
+footer{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+footer .flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:767px){
+    .leftContainer{
+        width: 100%;
+    }
+    .comments{
+        padding: 0;
+    }
+    .rightContainer{
+        width: 100%;
+    }
+    .rightContainer img{
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .profile p{
+        display: none;
+    }
+}
