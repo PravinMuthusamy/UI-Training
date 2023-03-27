@@ -46,13 +46,15 @@ const shapes = [
 let selectedShape = ''
 let selectedElement = ''
 let shapeIndex;
-const startSection = document.querySelector('.shape-section');
-const midSection = document.querySelector(".compute-section");
-const lastSection = document.querySelector('.result-section');
+const shapeSection = document.querySelector('.shape-section');
+const computeSection = document.querySelector(".compute-section");
+const resultSection = document.querySelector('.result-section');
 const shapeContainer = document.querySelector('#shapes');
 const nextBtn = document.querySelector('.next');
 const tick = document.querySelectorAll('.fa-tick');
 
+let prevShape = 0;
+let currShape = 0;
 shapeContainer.addEventListener('click', (event) => {
     selectedShape = event.target.className
     
@@ -64,8 +66,13 @@ shapeContainer.addEventListener('click', (event) => {
     selectedElement = document.querySelector('.' + shapes[shapeIndex].class)
 
     //toggle tick
-    tick.forEach(element => element.style.display = 'none');
-    tick[shapeIndex].style.display='block'
+    // tick.forEach(element => element.style.display = 'none');
+    // tick[shapeIndex].style.display='block'
+    // nextBtn.style.display = 'block'
+    prevShape = currShape;
+    currShape = shapeIndex;
+    tick[prevShape].style.display = 'none';
+    tick[currShape].style.display = 'block';
     nextBtn.style.display = 'block'
 })
  
@@ -76,20 +83,20 @@ nextBtn.addEventListener('click', () => {
     //section 2 
     //text box
     let textDiv = document.createElement('div')
-    textDiv.setAttribute('class', 'page2-top txt')
+    textDiv.setAttribute('class', 'txt')
     textDiv.append(shapes[shapeIndex].input)
-    midSection.append(textDiv)
+    computeSection.append(textDiv)
     //input box
     let inputBox = document.createElement('input')
-    inputBox.setAttribute('class', 'page2-mid')
+    inputBox.setAttribute('class', 'input-box')
     inputBox.setAttribute('type', 'number')
-    midSection.append(inputBox)
+    computeSection.append(inputBox)
     //calculate button
     let calculateButton = document.createElement('button')
-    calculateButton.setAttribute('class', 'button')
+    calculateButton.setAttribute('class', 'button') 
     calculateButton.append('CALCULATE')
     calculateButton.style.display = 'block';
-    midSection.append(calculateButton)
+    computeSection.append(calculateButton)
 
     // Event for calculation button
     calculateButton.addEventListener('click', () => {
@@ -101,16 +108,16 @@ nextBtn.addEventListener('click', () => {
             //performing calculation
             shapes[shapeIndex].calculation(inputValue)
             //section 3
-            midSection.innerHTML = '';
+            computeSection.innerHTML = '';
             //shape box
             let shapeShow = document.createElement('div')
             shapeShow.setAttribute('class', shapes[shapeIndex].class)
-            lastSection.append(shapeShow)
+            resultSection.append(shapeShow)
             //txt box
             let shapeName = document.createElement("div");
             shapeName.setAttribute('class', 'txt')
             shapeName.append(shapes[shapeIndex].name);
-            lastSection.append(shapeName)
+            resultSection.append(shapeName)
             //calculation table
             let calculationTable = document.createElement('div');
             calculationTable.setAttribute('class', 'calculation-table')
@@ -123,18 +130,18 @@ nextBtn.addEventListener('click', () => {
                 }
             }
             
-            lastSection.append(calculationTable)
+            resultSection.append(calculationTable)
 
             //start again button
             let startAgain = document.createElement('button');
             startAgain.setAttribute('class', 'button');
             startAgain.append('START AGAIN');
             startAgain.style.display = 'block';
-            lastSection.append(startAgain)
+            resultSection.append(startAgain)
 
             //start again event
             startAgain.addEventListener('click', () => {
-                lastSection.innerHTML = '';
+                resultSection.innerHTML = '';
                 localStorage.clear();
                 //Reverting to first section
                 document.querySelector('.shape-section').style.display = 'flex';

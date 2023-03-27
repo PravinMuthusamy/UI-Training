@@ -34,7 +34,7 @@ header {
 }
 
 /* page 1 */
-.page1-mid {
+.shape-selection {
     display: flex;
     justify-content: center;
     column-gap: 70px;
@@ -112,7 +112,7 @@ header {
     margin-top: 255px;
 }
 
-.page2-mid{
+.input-box{
     width: 715px;
     height: 90px;
     padding-top: 8px;
