@@ -1,0 +1,154 @@
+$color_1: white;
+$color_2: rgb(180, 180, 180);
+$color_3: rgb(92, 142, 220);
+$color_4: rgb(194, 232, 145);
+$font-family_1: "Roboto", sans-serif;
+$background-color_1: black;
+$background-color_2: white;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background-color: $background-color_1;
+  font-family: $font-family_1;
+}
+header {
+  color: $color_1;
+  display: grid;
+}
+.name {
+  display: flex;
+  font-size: 6em;
+  justify-content: center;
+  order: 2;
+}
+.role {
+  display: flex;
+  color: $color_2;
+  font-size: 3em;
+  justify-content: center;
+  order: 3;
+}
+.role-highlight {
+  color: $color_3;
+  margin: 0 13px;
+}
+.light {
+  font-weight: 100;
+  letter-spacing: 0.5;
+}
+.bold {
+  margin-left: 13px;
+}
+.mail {
+  display: flex;
+  font-size: 30px;
+  margin: 5%;
+  justify-content: end;
+  order: 1;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10%;
+  gap: 30px;
+  width: 80%;
+  justify-content: center;
+}
+.product {
+  width: 30%;
+}
+.label {
+  color: $color_1;
+  font-size: 50px;
+  text-align: center;
+}
+.label-highlight {
+  color: $color_4;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+  justify-content: center;
+  img {
+    object-fit: contain;
+    padding: 50px;
+    width: 200px;
+  }
+}
+.line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.short-line {
+  height: 1px;
+  width: 40px;
+  background-color: $background-color_2;
+}
+.long-line {
+  height: 1px;
+  width: 250px;
+  background-color: $background-color_2;
+  margin-left: 30px;
+}
+.socialmedia {
+  display: flex;
+  row-gap: 25px;
+  margin: 5%;
+  width: 50%;
+  margin-left: 37%;
+  img {
+    padding: 15px;
+    width: 10%;
+  }
+}
+footer {
+  color: $color_1;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 576px) {
+  .name {
+    order: 1;
+    font-size: 3em;
+  }
+  .role {
+    order: 2;
+    font-size: 2em;
+  }
+  .mail {
+    order: 3;
+    font-size: 1em;
+    justify-content: center;
+  }
+  .product {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logos {
+    img {
+      width: 50%;
+    }
+  }
+  .label {
+    font-size: 30px;
+  }
+  .socialmedia {
+    width: 100%;
+    margin-left: 46px;
+    img {
+      width: 17%;
+    }
+  }
+  footer {
+    font-size: 20px;
+  }
+}
