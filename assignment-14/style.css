@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+header p {
+    text-align: center;
+}
+
+header img {
+    height: 260px;
+    margin-top: -45px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    text-align: left;
+}
+
+form, footer {
+    background-color: #ffffff;
+}
+
+form {
+    width: 630px;
+    box-shadow: 0 10px 20px #5f5f5f4d;
+    padding: 0 32px;
+    margin-bottom: 130px;
+}
+
+h3 {
+    padding: 25px 0;
+    color: #071b6c;
+}
+
+label {
+    font-size: 10px;
+    padding: 300px 0;
+}
+
+input {
+    height: 44px;
+    width: 565px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-left input, .float-right input{
+    width: 270px;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+form p {
+    color: #ff0000;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.float-left p, .not-float {
+    margin-bottom: 25px;
+}
+
+input[type="submit"]{
+    background-color: #071b6c;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+footer {
+    height: 35px;
+}
